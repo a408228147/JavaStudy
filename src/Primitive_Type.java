@@ -2,9 +2,12 @@ import com.sun.glass.ui.Size;
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -61,7 +64,7 @@ public class Primitive_Type {
 
         System.out.printf("%tT",new Date());
         System.out.printf("%s %tB %<te, %<tY" ,"date" ,new Date());
-        Scanner in = new Scanner(Paths.get("E:\\123.txt"),"utf-8");
+       /* Scanner in = new Scanner(Paths.get("E:\\123.txt"),"utf-8");*/
 
         int k;
         {  //int k; java不允许嵌套块重定义一个变量
@@ -94,6 +97,85 @@ switch (s){
     case MEDIUM:
         System.out.println("medium");break;
 }
+//foreach
+     /*   Set<preson> set=new HashSet<preson>();	// 无序 数据不可以重复 因为有两个方法 equals 和hashcode
+        preson p1=new preson("feige",10);
+        preson p2=new preson("feige",10);
+        preson p3=new preson("请问",20);
+        preson p4=new preson("马哥",25);
+        set.add(p1);
+        set.add(p2);
+        set.add(p3);
+        set.add(p4);
+
+        for(Iterator<preson> it =set.iterator();it.hasNext();)//遍历迭代 取出值 iterator:迭代器
+        {
+
+            preson p=it.next();
+            System.out.println(p+"           "+"00000000");//没有过滤重复的值 要重写hashcode
+        }
+        System.out.println("---------");
+
+
+        List<preson> set1=new ArrayList<preson>();//有序  可以重复
+        preson p11=new preson("feige",10);
+        preson p21=new preson("feige",10);
+        preson p31=new preson("请问",20);
+        preson p41=new preson("马哥",25);
+        set1.add(p11);
+        set1.add(p21);
+        set1.add(p31);
+        set1.add(p41);
+
+        Iterator <preson> it1=set1.iterator();
+        while(it1.hasNext()){
+            preson p=it1.next();
+            System.out.println(p+"           "+"11111");
+        }
+        System.out.println("--------------");
+        for(preson i:set){
+            System.out.println(i+"           "+"2222");
+        }
+        System.out.println("---------");
+        for(preson j:set1){
+            System.out.println(j+"           "+"33333333");
+
+
+        }
+
+        HashMap<Integer,String> map = new HashMap<Integer, String>();//不用重写 hashcode equals 就会自动过滤重复的值
+        map.put(1, "value1");
+        map.put(2, "value2");
+        map.put(1, "value1");
+        map.put(3, "value3");
+        System.out.println(map.containsKey(4));
+        System.out.println(map.size());//键值不同的个数
+        System.out.println(map.isEmpty());//如果为空 就为 true 如果不为空 就是 flase
+        HashMap Map=d.op();
+
+        for(Map.Entry<Integer, String> me:map.entrySet())
+        {
+            System.out.println(me.getValue()+me.getKey());
+        }
+  <%=me.getValue()%>
+
+        for(Integer a: map.keySet())
+        {
+
+            System.out.println(a+"map"+map.get(a));
+        }
+<%=map.get(a)%>
+
+
+                Set<Integer> keyset=map.keySet();
+
+        for(Integer i:keyset){
+            System.out.println(i+"--"+map.get(i));
+
+        }*/
+int [] lucknumber = {1,2,3,4,5,6,7,8,9};
+     int [] copiedlucknumber = Arrays.copyOf(lucknumber,lucknumber.length);//复制数组
+
     }
     //定义枚举
     enum Size{SMALL,MEDIUM};
