@@ -1,6 +1,8 @@
 import com.sun.java.swing.plaf.windows.WindowsInternalFrameTitlePane;
 
 import java.util.Arrays;
+import java.util.Random;
+
 import java.util.Scanner;
 
 /**
@@ -9,6 +11,9 @@ import java.util.Scanner;
 //数组的存取排序操作
 public class Arrays_sort {
     public static void main (String [] args){
+        Random d=new Random();
+        d.nextInt(50);//随机产生0- n-1的数
+        System.out.println(d.nextInt(50));
      /*   Scanner in = new Scanner(System.in);
 
         System.out.println("How many number  do you need to drow ?");
@@ -53,6 +58,8 @@ public class Arrays_sort {
         }
         int n = Employee.getNextId();//call static method
         System.out.println("Next available id="+n);
+
+
 
     }
 public static void array(){
