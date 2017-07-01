@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 public class Primitive_Type {
     public static void main(String[] args) throws IOException {
-    /*   一共有8种数据类型   4种整形  int 4 short long 8 byte 1
+    /*   一共有8种数据类型   4种整形  int 4 short 2 long 8 byte 1
     2种浮点型  float 4  double 8
     1种由Unicode编码的字符单元类型char 1种 表示真值的boolean类型 */
 /*int a = 1_000_00;//java 7 以上  易读
@@ -139,7 +139,6 @@ switch (s){
         System.out.println("---------");
         for(preson j:set1){
             System.out.println(j+"           "+"33333333");
-
 
         }
 

@@ -34,18 +34,21 @@ public class Arrays_sort {
              ) {
             System.out.println(r);
         }*/
-     //array();
-        balances();
+    // array();
+        //balances();
+oop_CLASS.CalendarTest();
+
     }
 public static void array(){
 
     int [] lucknumber = {1,2,3,4,5,6,7,8,9};
     int [] copiedlucknumber = Arrays.copyOf(lucknumber,lucknumber.length);//复制数组
-
+ int [] copylucknumber =  lucknumber.clone();//拷贝数组
         Arrays.toString(lucknumber);//返回包含数组中的全部元素，被放在括号内，并用逗号分隔
     int a[] = Arrays.copyOf(lucknumber , 4);//复制数组长度为4
             Arrays.copyOfRange(lucknumber,1,3);//复制数组从下标1-3
 Arrays.binarySearch(lucknumber,3);//二分搜索算法查找值3，找到返回该值得下标，否则返回负数
+
 
 }
 public static  void balances (){
