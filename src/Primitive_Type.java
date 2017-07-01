@@ -173,8 +173,14 @@ switch (s){
             System.out.println(i+"--"+map.get(i));
 
         }*/
-int [] lucknumber = {1,2,3,4,5,6,7,8,9};
-     int [] copiedlucknumber = Arrays.copyOf(lucknumber,lucknumber.length);//复制数组
+
+
+
+
+
+
+
+
 
     }
     //定义枚举
