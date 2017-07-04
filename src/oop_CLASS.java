@@ -8,6 +8,7 @@ import java.time.LocalTime;
  * Created by Administrator on 2017/7/1.
  */
 //javase 8  LocalDate的运用
+/*
 public  class oop_CLASS {
     public static void date(){
         System.out.println(LocalDate.now());
@@ -90,3 +91,4 @@ public  class oop_CLASS {
      }
     }
 
+*/

@@ -37,11 +37,20 @@ public class Primitive_Type {
             System.out.println("false");
         }*/
         //遍历字符串
-        String cp = "hello";
+        String cp = "hello"; String toint="12345";
         int[] codePoints = cp.codePoints().toArray();
         for (int i = 0; i < codePoints.length; i++) {
-            System.out.println((char) codePoints[i]);
+            System.out.println( (char) codePoints[i]+"-----------");
         }
+        int ans = 0;
+        for (char c :toint.toCharArray()){
+            System.out.println(c+"cccccc");
+            ans = ans*10+c-'0';
+            System.out.println(ans+"ans");
+        }
+
+
+
       /*  String cp = "hello";
        for (int i=0;i<cp.length();i++) {
        char p=cp.charAt(i);
