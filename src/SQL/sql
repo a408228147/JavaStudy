@@ -1,0 +1,57 @@
+create table xct
+(
+id integer not null,
+username varchar(50),
+user_pwd varchar(50),
+user_age number(3),
+-- 主键关键字    主键名       建约束
+constraint  user_pk     primary key(id)
+)
+alter table xct add  constraint age_check  check ( (user_age>0 )and (user_age <=130) );
+
+--单唯一约束 也可以多唯一约束
+alter table xct add constraint  username_unique Unique(username,user_pwd);
+-- select 。。。。into newtableA from oldtableb where
+--把b表中查询出来的结果放入a表（可以未创建）中
+
+--  存储过程
+--建立
+create or replace procedure my_xc2(s_no in number, )
+as
+exem number;
+begin
+select Exam into exem from score where stunun=s_no
+if exem>50 then
+  dbms_output.put_line('good');
+  else
+     dbms_output.put_line('no-good');
+     end if;
+end my_xc2;
+
+--调用
+begin
+  my_xc2(333);
+end;
+
+exec my_xc;
+
+
+--带输入输出的参数
+select * from score where qname=3;
+
+create or replace   procedure my_xc3(s_no in number,msg out number)
+as
+exem number;
+begin
+select exam into exem from score where qname=s_no;
+msg:=exem;
+end my_xc3;
+
+
+
+ declare
+   re number;
+begin
+  my_xc3(3,re);
+dbms_output.put_line(re);
+end;
