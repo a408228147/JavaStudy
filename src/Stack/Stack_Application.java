@@ -7,8 +7,8 @@ public class Stack_Application {
         String s = "[()]{}{[()[]()]()}";
         // System.out.println(isComplete(s));
         Stack_Application x = new Stack_Application();
-        String a = x.conver2Postfix("1+2*(3+4)+5*(6+7)");
-        System.out.println(a);
+        String a = x.conver2Postfix("(1+2)*3");
+        System.out.println(x.numberCalculate(a));
     }
     /**
      * @Describe_栈的经典应用 判断括号是否匹配完整
@@ -154,8 +154,51 @@ while(!character.isEmpty())
         }
         return 0;
     }
+/**
+ * @Describe_计算后缀表达式的值
+ */
+public double numberCalculate(String postFix)
+{
+    Stack stack =new Stack();
+    postFix="12+3*";
+   for(int i=0 ;i<postFix.length();i++)
+   {
+       char c= postFix.charAt(i);
+       if (isOperator(c))
+       {
+           double d2 = Double.valueOf(stack.pop().toString());
+           double d1 = Double.valueOf(stack.pop().toString());
+           double d3 = 0;
+           switch (c) {
+               case '+':
+                   d3=d1+d2;
+                   break;
+               case '-':
+                   d3=d1-d2;
+                   break;
+               case '*':
+                   d3=d1*d2;
+                   break;
+               case '/':
+                   d3=d1/d2;
+                   break;
+               case '%':
+                   d3=d1%d2;
+                   break;
+               case '^':
+                   d3=Math.pow(d1, d2);
+                   break;
 
+               default:
+                   break;
+           }
 
+           stack.push(d3);//将操作后的结果入栈
+       }else{//当是操作数时，就直接进操作数栈
+           stack.push(c);
+       }    }
+    return (double)stack.pop();
+}
 
 }
 
