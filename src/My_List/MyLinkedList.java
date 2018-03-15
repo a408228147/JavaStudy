@@ -16,15 +16,15 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
 
     private static class Node<AnyType> {
         //  定义节点    节点的建立
+        public AnyType data;
+        public Node<AnyType> prev;
+        public Node<AnyType> next;
+
         public Node(AnyType d, Node<AnyType> p, Node<AnyType> n) {
             data = d; //该节点的值
             prev = p;//该节点的的上一个节点
             next = n;// 该节点的的下一个节点
         }
-
-        public AnyType data;
-        public Node<AnyType> prev;
-        public Node<AnyType> next;
     }
 //建立双链表的调用
     public MyLinkedList() {
@@ -52,7 +52,7 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
         return theSize == 0;
     }
 
-    //往链表中添加一个节点
+    //往链表末尾添加一个节点
     public boolean add(AnyType x) {
         add(size(), x);
         return true;

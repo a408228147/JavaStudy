@@ -192,7 +192,7 @@ switch (s){
 
     }
     //定义枚举
-    enum Size{SMALL,MEDIUM};
+    enum Size{SMALL,MEDIUM}
 }
 
 

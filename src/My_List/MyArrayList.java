@@ -1,6 +1,6 @@
 package My_List;
 
-//优点：get set 花费常数时间 缺点 插入和删除代价昂贵
+//优点：get set 花费常数时间 缺点: 插入和删除代价昂贵
 public class MyArrayList <AnyTyoe> implements Iterable<AnyTyoe> {
 
 
